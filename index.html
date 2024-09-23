@@ -58,7 +58,7 @@
         class="flex flex-col lg:flex-row items-center gap-10 my-5 border-2 border-gray-100 rounded-xl p-6"
       >
         <!-- img part -->
-        <div class="flex-1">
+        <div class="flex-1"> 
           <img class="w-full h-5/6" src="./assets/noakhali.png" alt="" />
         </div>
         <!-- content part  -->
@@ -68,7 +68,7 @@
             <span id="noakhali-balance" class="text-xl">0</span>
             <span class="text-xl">BDT</span>
           </button>
-          <h2 class="text-[#111111] text-xl font-bold my-5">
+          <h2 id="heading1" class="text-[#111111] text-xl font-bold my-5">
             Donate for Flood at Noakhali, Bangladesh
           </h2>
           <p class="text-[#111111B3] font-semibold mb-32">
@@ -198,7 +198,7 @@
             placeholder="Write Donation Amount"
           />
           <div class="text-center">
-            <button class="my-6 text-center bg-[#B4F461] py-3 px-5 rounded-xl text-[#111111] font-bold text-xl" onclick="my_modal_3.showModal()">Donate Now</button>
+            <button class="my-6 text-center bg-[#B4F461] py-3 px-5 rounded-xl text-[#111111] font-bold text-xl" onclick="buttonHandle(this), my_modal_3.showModal()">Donate Now</button>
           </div>
            <!-- Open the modal using ID.showModal() method -->
            <dialog id="my_modal_3" class="modal text-center">
@@ -228,7 +228,9 @@
 
       <!-- history section starts here  -->
        <section id="history-section" class="hidden">
-        <h1 class="text-5xl">this is history section</h1>
+        <h1 class="text-5xl">
+          
+        </h1>
        </section>
       <!-- history section ends here  -->
     </main>
