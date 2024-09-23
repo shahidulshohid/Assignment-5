@@ -1,5 +1,5 @@
 
-// show the section by donation and history button === common function
+// show the section by donation and history button
 function showSectionById(id){
     document.getElementById('donation-section').classList.add('hidden');
     document.getElementById('history-section').classList.add('hidden');
@@ -8,14 +8,13 @@ function showSectionById(id){
     document.getElementById(id).classList.remove('hidden')
 }
 
-//get the value by id ============= common function
+//get the value by id 
 function getTextFieldValueById(id){
 
     const inputValue = document.getElementById(id).value;
     const inputValueNumber = parseFloat(inputValue);
     return inputValueNumber;
 }
-
 
 
 

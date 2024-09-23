@@ -20,7 +20,7 @@ document.getElementById('donation-btn').addEventListener('click', function(){
     showSectionById('donation-section');
 });
 
-// section button of noakhali==============================
+// section button handler of noakhali==============================
 document.getElementById('noakhali-btn').addEventListener('click', function(){
 
     const inputValue = getTextFieldValueById('noakhali-input');
@@ -29,6 +29,9 @@ document.getElementById('noakhali-btn').addEventListener('click', function(){
     if(isNaN(inputValue) || inputValue <= 0 || inputValue === ''){
         
         return alert('Invalid Donation Amount');
+    }
+    else{
+        document.getElementById('my_modal_1').showModal()
     }
     
     // noakhali-balance update 
@@ -57,7 +60,7 @@ document.getElementById('noakhali-btn').addEventListener('click', function(){
     historyContainer.appendChild(div);
 })
 
-// section button of feni =============================
+// section button handler of feni =============================
 document.getElementById('feni-btn').addEventListener('click', function(){
 
     const inputValue = getTextFieldValueById('feni-input');
@@ -66,6 +69,9 @@ document.getElementById('feni-btn').addEventListener('click', function(){
     if(isNaN(inputValue) || inputValue <= 0 || inputValue === ''){
         
         return alert('Invalid Donation Amount');
+    }
+    else{
+        document.getElementById('my_modal_1').showModal()
     }
     
     // noakhali-balance update 
@@ -94,7 +100,7 @@ document.getElementById('feni-btn').addEventListener('click', function(){
     historyContainer.appendChild(div);
 })
 
-// section button of Quota Movement  =============================
+// section button handler of Quota Movement  =============================
 document.getElementById('quota-btn').addEventListener('click', function(){
 
     const inputValue = getTextFieldValueById('quota-input');
@@ -104,14 +110,16 @@ document.getElementById('quota-btn').addEventListener('click', function(){
         
         return alert('Invalid Donation Amount');
     }
-    
+    else{
+        document.getElementById('my_modal_1').showModal()
+    }
     // noakhali-balance update 
     const quotaBalance = document.getElementById('quota-balance').innerText;
     let quotaBalanceNumber = parseFloat(quotaBalance);
     quotaBalanceNumber += inputValue;
     document.getElementById('quota-balance').innerText = quotaBalanceNumber;
 
-    // main balance update 
+    // main balance update
     const mainBalance = document.getElementById('main-balance').innerText;
     let mainBalanceNumber = parseFloat(mainBalance);
     mainBalanceNumber -= inputValue;
