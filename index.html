@@ -19,7 +19,7 @@
         <div class="w-11/12 mx-auto">
           <div class="navbar py-5">
             <div class="navbar-start">
-              <a class="btn text-md md:text-xl bg-[#B4F461]" href="./home.html"
+              <a class="btn text-xl bg-[#B4F461]" href="./home.html"
                 >Block</a
               >
             </div>
@@ -27,31 +27,32 @@
               <div class="menu menu-horizontal px-1 flex items-center gap-2">
                 <img
                   src="./assets/logo.png"
-                  class="w-8 h-8 md:w-15 md:h-10"
+                  class="w-15 h-10"
                   alt=""
                 />
-                <h2 class="text-lg font-semibold md:text-xl md:font-bold">
+                <h2 class="text-xl font-bold hidden md:flex">
                   Donate Bangladesh
                 </h2>
               </div>
             </div>
             <div class="navbar-end space-x-1">
               <img src="./assets/coin.png" alt="" />
-              <span>5500</span>
-              <span>BDT</span>
+              <span class="text-xl font-semibold">5500</span>
+              <span class="text-xl font-semibold">BDT</span>
             </div>
           </div>
         </div>
       </div>
       <div class="flex justify-center items-center gap-5 mt-20">
-        <button class="btn btn-lg">Donation</button>
-        <button class="btn btn-lg">History</button>
+        <button id="donation-btn" class="btn btn-lg bg-[#B4F461]">Donation</button>
+        <button id="history-btn" class="btn btn-lg">History</button>
       </div>
     <div class="divider"></div>
       <!-- navbar ends here -->
     </header>
     
     <main class="w-11/12 mx-auto">
+      <div id="donation-section">
       <!-- Noakhali, Bangladesh section starts here-->
       <section
         class="flex flex-col lg:flex-row items-center gap-10 my-5 border-2 border-gray-100 rounded-xl p-6"
@@ -64,8 +65,8 @@
         <div class="flex-1">
           <button class="btn flex items-center gap-2">
             <img src="./assets/coin.png" alt="" />
-            <span>0</span>
-            <span>BDT</span>
+            <span class="text-xl">0</span>
+            <span class="text-xl">BDT</span>
           </button>
           <h2 class="text-[#111111] text-xl font-bold my-5">
             Donate for Flood at Noakhali, Bangladesh
@@ -78,8 +79,8 @@
             type="text"
             placeholder="Write Donation Amount"
           />
-          <div class="w-full my-5 text-center bg-[#B4F461] py-3 rounded-xl">
-            <button class="text-[#111111] font-bold text-xl" onclick="my_modal_1.showModal()">Donate Now</button>
+          <div class="text-center">
+            <button id="noakhali-btn" class="my-6 text-center bg-[#B4F461] py-3 px-5 rounded-xl text-[#111111] font-bold text-xl" onclick="my_modal_1.showModal()">Donate Now</button>
           </div>
            <!-- Open the modal using ID.showModal() method -->
            <dialog id="my_modal_1" class="modal text-center">
@@ -118,8 +119,8 @@
         <div class="flex-1">
           <button class="btn flex items-center gap-2">
             <img src="./assets/coin.png" alt="" />
-            <span>600</span>
-            <span>BDT</span>
+            <span class="text-xl">BDT</span>
+            <span class="text-xl">600</span>
           </button>
           <h2 class="text-[#111111] text-xl font-bold my-5">
             Donate for Flood Relief in Feni,Bangladesh
@@ -132,8 +133,8 @@
             type="text"
             placeholder="Write Donation Amount"
           />
-          <div class="w-full my-5 text-center bg-[#B4F461] py-3 rounded-xl">
-            <button class="text-[#111111] font-bold text-xl" onclick="my_modal_2.showModal()">Donate Now</button>
+          <div class="text-center">
+            <button class="my-6 text-center bg-[#B4F461] py-3 px-5 rounded-xl text-[#111111] font-bold text-xl" onclick="my_modal_2.showModal()">Donate Now</button>
           </div>
            <!-- Open the modal using ID.showModal() method -->
            <dialog id="my_modal_2" class="modal text-center">
@@ -172,8 +173,8 @@
         <div class="flex-1">
           <button class="btn flex items-center gap-2">
             <img src="./assets/coin.png" alt="" />
-            <span>2400</span>
-            <span>BDT</span>
+            <span class="text-xl">2400</span>
+            <span class="text-xl">BDT</span>
           </button>
           <h2 class="text-[#111111] text-xl font-bold my-5">
             Aid for Injured in the Quota Movement
@@ -196,8 +197,8 @@
             type="text"
             placeholder="Write Donation Amount"
           />
-          <div class="w-full my-5 text-center bg-[#B4F461] py-3 rounded-xl">
-            <button class="text-[#111111] font-bold text-xl" onclick="my_modal_3.showModal()">Donate Now</button>
+          <div class="text-center">
+            <button class="my-6 text-center bg-[#B4F461] py-3 px-5 rounded-xl text-[#111111] font-bold text-xl" onclick="my_modal_3.showModal()">Donate Now</button>
           </div>
            <!-- Open the modal using ID.showModal() method -->
            <dialog id="my_modal_3" class="modal text-center">
@@ -223,7 +224,15 @@
         </div>
       </section>
       <!-- Quota Movement, Bangladesh section ends here-->
+    </div>
 
+      <!-- history section starts here  -->
+       <section id="history-section" class="hidden">
+        <h1 class="text-5xl">this is history section</h1>
+       </section>
+      <!-- history section ends here  -->
     </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
