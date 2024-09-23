@@ -7,6 +7,7 @@ document.getElementById("history-btn").addEventListener("click", function () {
   document.getElementById("donation-btn").classList.remove("bg-[#B4F461]");
 });
 
+
 // show the section by donation button
 document.getElementById("donation-btn").addEventListener("click", function () {
   document.getElementById("donation-btn").classList.add("bg-[#B4F461]");
@@ -16,6 +17,8 @@ document.getElementById("donation-btn").addEventListener("click", function () {
   showSectionById("donation-section");
 });
 
+
+// main balance impliment 
 const mainBalance = document.getElementById("main-balance").innerText;
 let mainBalanceNumber = parseFloat(mainBalance);
 // section button handler of noakhali==============================
@@ -34,6 +37,7 @@ document.getElementById("noakhali-btn").addEventListener("click", function () {
     // madal validation
     document.getElementById("my_modal_1").showModal();
   }
+
 
   // noakhali-balance update
   const noakhaliBalance = document.getElementById("noakhali-balance").innerText;
@@ -58,6 +62,7 @@ document.getElementById("noakhali-btn").addEventListener("click", function () {
     `;
   historyContainer.appendChild(div);
 });
+
 
 // section button handler of feni =============================
 document.getElementById("feni-btn").addEventListener("click", function () {
@@ -99,6 +104,7 @@ document.getElementById("feni-btn").addEventListener("click", function () {
     `;
   historyContainer.appendChild(div);
 });
+
 
 // section button handler of Quota Movement  =============================
 document.getElementById("quota-btn").addEventListener("click", function () {
