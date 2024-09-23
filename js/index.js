@@ -22,5 +22,7 @@ document.getElementById('donation-btn').addEventListener('click', function(){
 
 // section button
 document.getElementById('noakhali-btn').addEventListener('click', function(){
+    const value = getTextFieldValueById('noakhali-input');
+    console.log(value);
     
 })

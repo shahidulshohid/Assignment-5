@@ -7,3 +7,10 @@ function showSectionById(id){
     //show the section with the provided id as parameter
     document.getElementById(id).classList.remove('hidden')
 }
+
+//get the value by id
+function getTextFieldValueById(id){
+    const inputValue = document.getElementById(id).value;
+    const inputValueNumber = parseFloat(inputValue);
+    return inputValueNumber;
+}
