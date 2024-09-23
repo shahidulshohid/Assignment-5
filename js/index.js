@@ -20,9 +20,17 @@ document.getElementById('donation-btn').addEventListener('click', function(){
     showSectionById('donation-section');
 });
 
-// section button
+// section button of noakhali
 document.getElementById('noakhali-btn').addEventListener('click', function(){
-    const value = getTextFieldValueById('noakhali-input');
-    console.log(value);
+
+    const inputValue = getTextFieldValueById('noakhali-input');
+
+    // noakhali-balance update 
+    const noakhaliBalance = document.getElementById('noakhali-balance').innerText;
+    let noakhaliBalanceNumber = parseFloat(noakhaliBalance);
+    let currentBalance = noakhaliBalanceNumber += inputValue;
+    document.getElementById('noakhali-balance').innerText = currentBalance;
+    console.log(currentBalance);
+    
     
 })
