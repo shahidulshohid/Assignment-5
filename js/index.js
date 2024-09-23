@@ -25,12 +25,22 @@ document.getElementById('noakhali-btn').addEventListener('click', function(){
 
     const inputValue = getTextFieldValueById('noakhali-input');
 
+    // inputValue validation here 
+    if(isNaN(inputValue) || inputValue <= 0 || inputValue === ''){
+        
+        return alert('Invalid Number');
+    }
+    
     // noakhali-balance update 
     const noakhaliBalance = document.getElementById('noakhali-balance').innerText;
     let noakhaliBalanceNumber = parseFloat(noakhaliBalance);
-    let currentBalance = noakhaliBalanceNumber += inputValue;
-    document.getElementById('noakhali-balance').innerText = currentBalance;
-    console.log(currentBalance);
-    
+    noakhaliBalanceNumber += inputValue;
+    document.getElementById('noakhali-balance').innerText = noakhaliBalanceNumber;
+
+    // main balance update 
+    const mainBalance = document.getElementById('main-balance').innerText;
+    let mainBalanceNumber = parseFloat(mainBalance);
+    mainBalanceNumber -= inputValue;
+    document.getElementById('main-balance').innerText = mainBalanceNumber;
     
 })
