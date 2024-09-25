@@ -12,7 +12,7 @@ function showSectionById(id){
 function getTextFieldValueById(id){
 
     const inputValue = document.getElementById(id).value;
-    const inputValueNumber = parseFloat(inputValue);
+    const inputValueNumber = Number(inputValue);
     return inputValueNumber;
 }
 
